@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   align-items: flex-start;
+  background-color:#FFFFFF;
+  border-radius:5px;
 `;
 
 export const WrapperInfoUser = styled.div`
@@ -11,7 +13,7 @@ export const WrapperInfoUser = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   margin-left: 8px;
-  height: 200px;
+  height: 250px;
 
   h1 {
     font-size: 32px;

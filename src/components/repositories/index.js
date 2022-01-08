@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import useGithub from "../../hooks/github-hooks";
+import CheckList from "../checkList";
 import RepositoryItem from "../repository-item";
 import * as S from "./styled";
+import { FaStar,FaArchive } from 'react-icons/fa';
 
 const Repositories = () => {
   const { githubState, getUserRepos, getUserStarred } = useGithub();
@@ -17,16 +19,33 @@ const Repositories = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [githubState.user.login]);
 
+
+  // let temJava = ()=>{
+
+  
+  //   githubState.starred.map((item) => {
+  //     console.log(item.language)
+  //     if(item.language == 'Java'){
+  //       return true;
+  //     }
+  //   })
+   
+  //   // console.log('saiu')
+  //   // return false;
+  // }
+
   return (
     <>
       {hasUserForSearchrepos ? (
+        
         <S.WrapperTabs
           selectedTabClassName="is-selected"
           selectedTabPanelClassName="is-selected"
         >
           <S.WrapperTabList>
-            <S.WrapperTab>Repositories</S.WrapperTab>
-            <S.WrapperTab>Starred</S.WrapperTab>
+            <S.WrapperTab> <FaArchive/> Repositories</S.WrapperTab>
+            <S.WrapperTab> <FaStar/> Starred</S.WrapperTab>
+            {/* <S.WrapperTab>Check</S.WrapperTab> */}
           </S.WrapperTabList>
           <S.WrapperTabPanel>
             <S.WrapperList>
@@ -36,6 +55,7 @@ const Repositories = () => {
                   name={item.name}
                   linkToRepo={item.full_name}
                   fullName={item.full_name}
+                  language={item.language}
                 />
               ))}
             </S.WrapperList>

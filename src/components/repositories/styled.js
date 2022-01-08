@@ -12,18 +12,27 @@ export const WrapperTabList = styled(TabList)`
   padding: 4px;
   display: flex;
   margin: 0;
+  margin-left:20px;
 `;
 WrapperTabList.tabsRole = "TabList";
 
+
+
 export const WrapperTab = styled(Tab)`
-  border-radius: 16px;
+  border-radius: 8px;
   border: 1px solid #ccc;
   padding: 16px;
   user-select: none;
   cursor: pointer;
   z-index: 99999;
-  background-color: "#fff";
+  // background-color: #0EF62A;
+  background-color:#002BFF;
   margin: 8px;
+
+  color:#FFF;
+
+  
+
 
   &:focus {
     outline: none;

@@ -13,6 +13,7 @@ const Header = () => {
 
   return (
     <header>
+      <S.WrapperSpan>GETGIT</S.WrapperSpan>
       <S.Wrapper>
         <input
           type="text"

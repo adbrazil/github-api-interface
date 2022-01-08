@@ -1,18 +1,31 @@
 import styled from "styled-components";
 
+
+export const WrapperSpan = styled.div`
+font-weight: bold;
+font-size:70px;
+color: #ffff;
+align-self:center;
+`;
+
+
 export const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  //justify-content: space-between;
+  justify-content: flex-end;
   padding: 4px;
+  //background-color: green;
 
   input {
     border: 1px solid #ccc;
     border-radius: 8px;
-    width: 100%;
+    width: 30%;
     height: 44px;
     padding: 8px;
-    font-weight: 500;
+    font-weight: 500px;
+    background-color:#FFFFFF;
+
   }
 
   button {
